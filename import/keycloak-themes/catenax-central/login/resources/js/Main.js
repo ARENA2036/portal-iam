@@ -255,7 +255,7 @@ class Footer extends Viewable {
       super()
       this.view = N('footer', [
           N('div', '', { class: 'links' }),
-          N('div', 'Copyright © Catena-X Automotive Network.', { class: 'copy' })
+          N('div', 'Copyright © ARENA2036-X Network.', { class: 'copy' })
       ])
   }
 }

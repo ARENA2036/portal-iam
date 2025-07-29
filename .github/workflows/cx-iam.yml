@@ -39,7 +39,7 @@ on:
         default: 'latest'
 
 env:
-  IMAGE_NAMESPACE: "arena2036.azurecr.io"
+  IMAGE_NAMESPACE: "constructx.azurecr.io"
   IMAGE_NAME: "portal-iam"
 
 jobs:

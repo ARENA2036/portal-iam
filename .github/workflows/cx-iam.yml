@@ -63,9 +63,9 @@ jobs:
       - name: Login to DockerHub
         uses: azure/docker-login@v1
         with:
-          login-server: ${{ secrets.AZURE_URL }}
-          username: ${{ secrets.ACR_USERNAME }}
-          password: ${{ secrets.ACR_PASSWORD }}
+          login-server: ${{ secrets.AZURE_URL_CONSTRUCTX }}
+          username: ${{ secrets.ACR_USERNAME_CONSTRUCTX }}
+          password: ${{ secrets.ACR_PASSWORD_CONSTRUCTX }}
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@b5ca514318bd6ebac0fb2aedd5d36ec1b5c232a2 # v3.10.0

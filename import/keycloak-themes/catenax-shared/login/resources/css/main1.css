@@ -1,0 +1,248 @@
+/********************************************************************************
+ * Copyright (c) 2023 Contributors to the Eclipse Foundation
+ *
+ * See the NOTICE file(s) distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Apache License, Version 2.0 which is available at
+ * https://www.apache.org/licenses/LICENSE-2.0.
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations
+ * under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ ********************************************************************************/
+
+ body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat-Light';
+  overflow-x: hidden;
+  background-image: url('../../../../../../assets/login.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: -8%;
+}
+
+.bs {
+  box-shadow: 2px 2px 5px #f0f0f0;
+}
+
+header {
+  height: 80px;
+  background-image: url('../../../../../../assets/construct-x-logo.svg');
+  background-repeat: no-repeat;
+  background-position: 10px -30px;
+  background-size: 200px 120px;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: #111111;
+  font-family: 'Montserrat-Light';
+}
+
+header h3 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 40px;
+  color: #111111;
+  font-family: 'Montserrat-Light';
+}
+
+section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 80px;
+  background-color: white;
+  border-radius: 40px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+  rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+  rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  max-width: 520px;
+  text-align: center;
+}
+
+.user-icon {
+  height: 60px;
+  width: 60px;
+  background-color: #1772cb;
+  background-image: url("../images/user.svg");
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  border-radius: 50%;
+  margin: 0px auto;
+}
+
+form {
+  margin-top: 40px;
+}
+
+form > div {
+  text-align: left;
+  margin: 16px 0px;
+}
+
+form label,
+form span.required {
+  font-size: 14px;
+}
+
+form span.required,
+#input-error {
+  font-size: 14px;
+  color: rgb(211, 47, 47);
+}
+
+form input {
+  width: 480px;
+  font-size: 20px;
+  padding: 16px;
+  margin: 4px 0;
+  border: 0px;
+  outline: none;
+  background-color: #f9f9f9;
+  color: #444444;
+  border-radius: 6px 6px 0px 0px;
+  border-bottom: 1px solid #444444;
+}
+
+form input[aria-invalid=true] {
+  border-bottom: 2px solid rgb(211, 47, 47);
+}
+
+.pwwrapper {
+  position: relative;
+}
+
+.pwwrapper input {
+  max-width: 440px !important;
+  padding-right: 56px !important;
+}
+
+.hidden, .visible {
+  position: absolute;
+  cursor: pointer;
+  top: 20px;
+  right: 20px;
+  border: 0px;
+  width: 20px;
+  height: 20px;
+  color: gray;
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.visible {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+CjxnPgo8cGF0aCBmaWxsPSIjODA4MDgwIiBkPSJNNTAsMTUuOUMyNy4zLDE1LjksNy43LDMwLDAsNTBjNy43LDIwLDI3LjMsMzQuMSw1MCwzNC4xUzkyLjMsNzAsMTAwLDUwQzkyLjMsMzAsNzIuNywxNS45LDUwLDE1Ljl6Ck01MCw3Mi43Yy0xMi43LDAtMjIuNy0xMC0yMi43LTIyLjdzMTAtMjIuNywyMi43LTIyLjdzMjIuNywxMCwyMi43LDIyLjdTNjIuNyw3Mi43LDUwLDcyLjd6IE01MCwzNi40Yy03LjcsMC0xMy42LDUuOS0xMy42LDEzLjYKUzQyLjMsNjMuNiw1MCw2My42UzYzLjYsNTcuNyw2My42LDUwUzU3LjcsMzYuNCw1MCwzNi40eiIvPgo8L2c+Cjwvc3ZnPgo=');
+}
+
+.hidden {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDEwMCAxMDAiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5leWVIaWRlMHtmaWxsOiM4MDgwODA7fTwvc3R5bGU+CjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsMikiPgo8cGF0aCBjbGFzcz0iZXllSGlkZTAiIGQ9Ik00OS4yLDM0LjJsMTQuMywxNC4zbDAuMS0wLjdjMC03LjUtNi4xLTEzLjYtMTMuNi0xMy42TDQ5LjIsMzQuMnoiLz4KPHBhdGggY2xhc3M9ImV5ZUhpZGUwIiBkPSJNNTAsMjVjMTIuNSwwLDIyLjcsMTAuMiwyMi43LDIyLjdjMCwyLjktMC42LDUuNy0xLjYsOC4zbDEzLjMsMTMuM2M2LjktNS43LDEyLjMtMTMuMSwxNS42LTIxLjYKYy03LjktMTkuOS0yNy4zLTM0LjEtNTAtMzQuMWMtNi40LDAtMTIuNSwxLjEtMTguMSwzLjJsOS44LDkuOEM0NC4zLDI1LjYsNDcuMSwyNSw1MCwyNXoiLz4KPHBhdGggY2xhc3M9ImV5ZUhpZGUwIiBkPSJNNC41LDEyLjZMMTQuOSwyM2wyLjEsMi4xQzkuNSwzMC45LDMuNSwzOC43LDAsNDcuN2M3LjksMTkuOSwyNy4zLDM0LjEsNTAsMzQuMWM3LDAsMTMuOC0xLjQsMTkuOS0zLjgKbDEuOSwxLjlsMTMuMiwxMy4zbDUuOC01LjhMMTAuMyw2LjhMNC41LDEyLjZ6IE0yOS43LDM3LjdsNyw3Yy0wLjIsMS0wLjMsMi0wLjMsM2MwLDcuNSw2LjEsMTMuNiwxMy42LDEzLjZjMSwwLDItMC4xLDMtMC4zbDcsNwpjLTMsMS41LTYuNCwyLjQtMTAsMi40Yy0xMi41LDAtMjIuNy0xMC4yLTIyLjctMjIuN0MyNy4zLDQ0LjEsMjguMiw0MC44LDI5LjcsMzcuN3oiLz4KPC9nPgo8L3N2Zz4K');
+}
+
+form input[type=submit] {
+  cursor: pointer;
+  width: 160px;
+  background-color: rgb(15, 113, 203);
+  color: white;
+  border: 0px;
+  border-radius: 50px;
+  box-shadow: none;
+  font-size: 18px;
+  padding: 14px 24px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+form input[type=submit]:hover {
+  background-color: rgb(10, 80, 150);
+}
+
+form input[type=submit]:disabled {
+  background-color: rgb(192, 192, 192);
+}
+
+form a {
+  display: block;
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+#kc-form-buttons {
+  padding: 16px 0 0 0;
+}
+
+button[aria-controls="password-new"],
+button[aria-controls="password-confirm"] {
+  display: none;
+}
+
+#logout-sessions {
+  width: 20px;
+}
+
+.password-policy-hint {
+  text-align: left;
+  line-height: 20px;
+  list-style-type: none;
+  padding-inline-start: 10px;
+}
+
+.valid {
+  color: darkgreen;
+}
+
+.invalid {
+  color: red;
+}
+
+.valid::before {
+  content: '✔ ';
+}
+
+.invalid::before {
+  content: '✘ ';
+}
+
+footer {
+  font-family: 'Montserrat-Light';
+  margin-top: auto;
+  text-align: center;
+  padding-top: 9vw;
+  padding-bottom: 20px;
+}
+
+.links, .copy {
+  line-height: 40px;
+  min-height: 40px;
+}
+
+.links {
+  padding-top: 20px;
+}
+
+.links a {
+  color: black;
+  margin: 0 10px;
+}
+
+.copy {
+  font-size: 12px;
+}

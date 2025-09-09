@@ -1,35 +1,15 @@
-/********************************************************************************
- * Copyright (c) 2023 Contributors to the Eclipse Foundation
- *
- * See the NOTICE file(s) distributed with this work for additional
- * information regarding copyright ownership.
- *
- * This program and the accompanying materials are made available under the
- * terms of the Apache License, Version 2.0 which is available at
- * https://www.apache.org/licenses/LICENSE-2.0.
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations
- * under the License.
- *
- * SPDX-License-Identifier: Apache-2.0
- ********************************************************************************/
-
- body, html {
+ body {
   margin: 0;
-  height: 100%;
   padding: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
    font-family: 'Montserrat-Light';
-  overflow-x: hidden;
   background-image: url('../../../../../../assets/login.jpg');
+    background-repeat: no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: -8%;
+  background-position: center;
+  overflow-x: hidden;
 }
 
 .bs {
@@ -46,7 +26,6 @@ header {
   background-size: 200px 120px;
   text-align: center;
 }
-
 
 header h1 {
   text-align: center;
@@ -67,41 +46,82 @@ header h3 {
 }
 
 section {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.75);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  padding: 60px 80px;
-  background-color: white;
-  border-radius: 40px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-  rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-  rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  max-width: 520px;
-  text-align: center;
-}
-
-.user-icon {
-  height: 60px;
-  width: 60px;
-  background-color: #1772cb;
-  background-image: url("../images/user.svg");
-  background-repeat: no-repeat;
-  background-position: 15px center;
-  border-radius: 50%;
   margin: 0px auto;
+  max-width: 740px;
 }
 
-form {
-  margin-top: 40px;
+.card {
+  position: relative;
+  cursor: pointer;
+  margin: 36px 24px auto 0;
+}
+
+.card .overlay {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 184px;
+  height: 154px;
+  color: white;
+  background-color: rgba(128, 128, 128, 210);
+  border-radius: 15px;
+  transition: all 0.1s ease-out;
+  transform: scale(0.0);
+  opacity: 0.8;
+}
+
+.card:hover .overlay {
+  transform: scale(0.0);
+}
+
+.card:hover .overlay .switch {
+  width: 100%;
+  height: 154px;
+  font-size: 32px;
+  margin: 36px auto;
+}
+
+.card .card-image {
+  padding: 12px;
+  border-radius: 0px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 160px;
+  height: 80px;
+  background-color: #dddddd;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('../../../../../../assets/construct-x-gray.svg');
+    background-size: contain;
+  border: 0px;
+  margin-bottom: 11px;
+}
+
+.card .card-name {
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 160px;
+  background-color: white;
+  margin-top: 0px;
+  padding: 12px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: 0px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #111111;
+   font-family: 'Montserrat-Light';
 }
 
 form > div {
   text-align: left;
-  margin: 16px 0px;
+  margin: 16px 20px;
+  width: 500px;
 }
 
 form label,
@@ -122,14 +142,15 @@ form input {
   margin: 4px 0;
   border: 0px;
   outline: none;
-  background-color: #f9f9f9;
-  color: #444444;
+  background-color: white;
   border-radius: 6px 6px 0px 0px;
+  color: #444444;
+  background-color: white;
   border-bottom: 1px solid #444444;
 }
 
 form input[aria-invalid=true] {
-  border-bottom: 2px solid rgb(211, 47, 47);
+  border-bottom: 2px solid rgb(211, 47, 47);;
 }
 
 .pwwrapper {
@@ -145,7 +166,7 @@ form input[aria-invalid=true] {
   position: absolute;
   cursor: pointer;
   top: 20px;
-  right: 20px;
+  right: 8px;
   border: 0px;
   width: 20px;
   height: 20px;
@@ -191,7 +212,7 @@ form a {
 }
 
 #kc-form-buttons {
-  padding: 16px 0 0 0;
+  padding: 16px 0px;
 }
 
 button[aria-controls="password-new"],
@@ -204,10 +225,9 @@ button[aria-controls="password-confirm"] {
 }
 
 .password-policy-hint {
-  text-align: left;
   line-height: 20px;
   list-style-type: none;
-  padding-inline-start: 10px;
+  padding-inline-start: 30px;
 }
 
 .valid {
@@ -231,7 +251,7 @@ footer {
   margin-top: auto;
   text-align: center;
   padding-top: 9vw;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -240,7 +260,7 @@ footer {
   background-image: url('../../../../../../assets/footer.svg'); 
   background-repeat: no-repeat;
   background-position: center center; 
-  background-size: 15% auto;
+  background-size: 20% auto;
   
 }
 
@@ -261,29 +281,4 @@ footer {
 
 .copy {
   font-size: 12px;
-}
-
-
-@media (max-width: 768px) {
-  header {
-    background-size: 150px auto;
-    background-position: 20px center;
-  }
-}
-
-@media (max-width: 480px) {
-  header {
-    background-size: 120px auto;
-    background-position: 15px center;
-    height: 70px;
-  }
-}
-
-/* For very small screens */
-@media (max-width: 320px) {
-  header {
-    background-size: 100px auto;
-    background-position: 10px center;
-    height: 60px;
-  }
 }

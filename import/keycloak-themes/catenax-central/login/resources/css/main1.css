@@ -53,7 +53,7 @@ pre#providers {
   background-image: url('../../../../../../assets/construct-x-logo.svg');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 200px 120px;
+  background-size: contain;
 }
 
 .test {
@@ -145,11 +145,11 @@ ul > li > a {
   border-top-right-radius: 15px;
   width: 160px;
   height: 80px;
-  background-color: #d4d4d4;
+  background-color: #F4F3F3;
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url('../../../../../../assets/construct-x-gray.svg');
-  background-size: 200px 70px;
+  background-size: contain;
   border: 0px;
   margin-bottom: 11px;
 }
@@ -208,10 +208,11 @@ footer {
   margin-top: auto;
   text-align: center;
   padding-top: 9vw;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
   background-image: url('../../../../../../assets/footer.svg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 20%;
+  background-position: center 5px;
 }
 
 .links, .copy {

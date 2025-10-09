@@ -92,6 +92,20 @@ pre#providers {
   border-radius: 35px;
 }
 
+.message {
+  text-align: center;
+  font-weight: bold;
+  color: rgb(255, 166, 0);
+  margin: 0;
+  padding: 10px;
+  background: #fff3cd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000
+}
+
 .title {
   text-align: center;
   font-size: 56px;
@@ -122,18 +136,18 @@ ul {
   margin: 60px;
 }
 
-ul > li {
+ul>li {
   cursor: pointer;
   margin: 1rem;
   transition: all 0.1s ease-out;
   transform: scale(0.9);
 }
 
-ul > li:hover {
+ul>li:hover {
   transform: scale(1);
 }
 
-ul > li > a {
+ul>li>a {
   text-decoration: none;
   color: black;
 }
@@ -215,7 +229,8 @@ footer {
   background-position: center 5px;
 }
 
-.links, .copy {
+.links,
+.copy {
   line-height: 40px;
   min-height: 40px;
 }

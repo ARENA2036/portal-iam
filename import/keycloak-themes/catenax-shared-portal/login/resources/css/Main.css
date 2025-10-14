@@ -58,6 +58,20 @@ section {
   cursor: pointer;
   margin: 36px 24px auto 0;
 }
+.message {
+  text-align: center;
+  font-weight: bold;
+  color: rgb(255, 166, 0);
+  margin: 0;
+  padding: 10px;
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  margin-bottom: 15px;
+}
 
 .card .overlay {
   position: absolute;

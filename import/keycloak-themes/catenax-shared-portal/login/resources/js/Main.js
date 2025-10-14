@@ -442,15 +442,15 @@ class App extends Viewable {
 }
 
 class Header extends Viewable {
-
     constructor(title) {
         super(
             N('header', [
+                N('div', `This is a complete Tractus-X implementation of Release 25-03, but bypassing SD Factory and Clearing House -
+  This is NOT a production environment - it is for Testing purposes only`, { class: 'message' }),
                 N('h3', title)
             ])
         )
     }
-
 }
 
 class Main extends Viewable {

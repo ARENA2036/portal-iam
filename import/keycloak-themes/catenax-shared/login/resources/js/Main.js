@@ -445,10 +445,13 @@ class Header extends Viewable {
 
     constructor(title) {
         super(
-            N('header')
+            N('header', [
+                N('div', `This is a complete Tractus-X implementation of Release 25-03, but bypassing SD Factory and Clearing House -
+  This is NOT a production environment - it is for Testing purposes only`, { class: 'message' }),
+        
+            ])
         )
     }
-
 }
 
 class Main extends Viewable {
@@ -465,7 +468,7 @@ class Footer extends Viewable {
         super(
             N('footer', [
                 N('div', '', { class: 'links' }),
-                N('div', 'Copyright © ARENA2036-X Network.', { class: 'copy' })
+                N('div', 'Copyright © ARENA2036-X', { class: 'copy' })
             ])
         )
     }

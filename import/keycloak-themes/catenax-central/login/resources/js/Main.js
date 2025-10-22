@@ -236,18 +236,20 @@ class Page extends Viewable {
 }
 
 class Header extends Viewable {
-  constructor() {
-      super()
-      this.view = N(
-          'header',
-          [
-              N('div', null, { class: 'logo' }),
-              N('div', 'Search and select', { class: 'title' }),
-              N('div', 'your company name to login', { class: 'subtitle' }),
-              Search.getView()
-          ]
-      )
-  }
+    constructor() {
+        super()
+        this.view = N(
+            'header',
+            [
+                N('div', `This is a complete Tractus-X implementation of Release 25-03, but bypassing SD Factory and Clearing House -
+  This is NOT a production environment - it is for Testing purposes only`, { class: 'message' }),
+                N('div', null, { class: 'logo' }),
+                N('div', 'Search and select', { class: 'title' }),
+                N('div', 'your company name to login', { class: 'subtitle' }),
+                Search.getView()
+            ]
+        )
+    }
 }
 
 class Footer extends Viewable {
@@ -255,7 +257,7 @@ class Footer extends Viewable {
       super()
       this.view = N('footer', [
           N('div', '', { class: 'links' }),
-          N('div', 'Copyright © ARENA2036-X Network.', { class: 'copy' })
+          N('div', 'Copyright © ARENA2036-X', { class: 'copy' })
       ])
   }
 }
@@ -277,7 +279,7 @@ window.onload = () => {
       icon.rel = 'icon'
       document.head.appendChild(icon)
     }
-    icon.href = 'data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAABT1JREFUaEPlWT1MY0cQ/ubZkEhJ4TRJS9oIg9FhpFSBpDgp8SNcF0xxRkkPaS8Fpri0QJ8I7iTs64AzKZNAFQkjYWyU9qBMmoCUSLnEZqJ9frbfz+6+fTa6QLKlPW9nvtnZ+WZmCQMu3kQKr2EFQAGECZrH+YBbxvqcYkkHhLmMaTA2AYw4fxFmaB4Hg+wZ99u+AXAJawCWfQrvAgA3ZH4EkAl5604AKGELwEPpUd8RAC+6MR9EcUcAsPKi/R8B7PyUGUkmmw+JaITZzWbAJZgOmi1r78H7NW1ajpWFeBsZEE5u4gSE4UNDrRVmFCJS567FrdVPpn6uyeSMAXAZK2AUtcoMQmjnJJNKNFsrFEzBUQTAtGxP1TfC1y7iQy5jxCWr6SgdILyrY+Lvjt7LsJXY8YRK5JZeASJs5SYbi77fdDvwNpZAjtdTBpquKK+Wq1RHVwDSn6CBEhBv2JNnXQKVhpBDVq9jDdHx2VPJWKQFhyN8S3j9mpKbAIeJz8RgqQzP2Nkzp2QJAdAyrVzhlSjkKI/d4N+Vo7ElEK/3baf6wwM725gJAejD+EMQCsG4b6fGlijyou9Nz8hDAjlOYPAcgA90wIeH6Z374/VffSfAJQhvLRl4THi9SHlH3rdcr5veGzBwRYSCPdnwnWDlKL0FUpQsQqNFs/a9eqULwC2NRZEWtU5BmAt5/SSTSjYdrwvvGS0C9v5OJgoPJmqXsg8qx+kaGOOy/wg0n8vWn3kB7ILxqVYzY5UWwlxQOU7PuanWJFs5XrdAxVy2rr0flePRdTDJI8LlBQcAP8UbSOL3CONDWUaQUlyvAzhsNhOFYIng8I3IKp6OrlIdKwIsur3QYvDXs9mzr9oASvgQwPcaABuU9zcvleroNBFtmpKSzutccsJOhF+K8r3MaA7gGT7DNcpKAC/xFi2iG6fPq+m1WKUA4dS6bhWC9Yyb9Xz3pj8AZXwOxjdSAIQ9mu9dzP3q2DKDRTtpuGjVztZDDOz1unej/gBs4zEIj6QWBS5upTp2YsSqeq+LuPb3067yVwAgrW5oOh4g3mgmksVgegxNMSQe+5cB0AVwXejUKV77pFOMWwWA8aQ5lFgOeb3dBImLalLMnVK+J2eehWLdAX8IqUoBJz2bNEG+Y/IT5X41vcuQkyuBvshl69+2eaBPAKpSwG2Cdgy93oHg4xqXJH9TpTpfKREXgPA6GMuzU41Q/R+zCRL2SctxbRkBIGHRRx/fq/8Q+wREg/JXa/hSWgq056TmJTRhD3+i4CVJgej5UbpA7XujXMPD9Ob98fofHQCPQHiskA6VEUE5FSlp9A/UBInQzWUbTtXbBqAvJWqUx4TMGFkpYEDPN9AEBVpKLsEWJ6dRvk55fBnI690CzMDoTqwP3gTJmnp+ireRxC8RhogmunNpxTDKPNaBG2qC6KKZtDJeruk1NCXnYULbhxp62i92Q00QCKfNRGI6SJReACIkRO6+qXUqxjK0gNBI0CTLeI3QtZ7Bpl49+48DS+H1zhb7x+kXJo2QSesZngsNFkoX7phF+U7mjlzEG4N+Kcrx4Efyydw2iiDn5THO2sBLFIOkFNxAtKIARUw/5E2QzBjldNoZpVsoRk4qAGleVyGPAmBxa0I1So8FoCPsFmZzIOdJVYxNUiCc4xo1WDiI+6waBcDONoxH/l0mjhMng8r+xwHQhZ2ttx/NDVes4zLcUyumPQHGE3uqEfXk5Nv/9gBQMG2U024HgECBFmV0gKXjiA8u6w8h9RTDVNMrPwH3lfKciLdksyNTwzty/wATsrFPLbsvywAAAABJRU5ErkJggg=='
+    icon.href = 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iRWJlbmVfMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTI4LjA3IDEyOC4wNyI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogIzFkNDM2ODsKICAgICAgfQoKICAgICAgLmNscy0yIHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICB9CgogICAgICAuY2xzLTMgewogICAgICAgIGZpbGw6ICNlYzY0MWM7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxnIGlkPSJFYmVuZV8xLTIiIGRhdGEtbmFtZT0iRWJlbmVfMSI+CiAgICA8cmVjdCBjbGFzcz0iY2xzLTIiIHdpZHRoPSIxMjguMDciIGhlaWdodD0iMTI4LjA3Ii8+CiAgICA8Zz4KICAgICAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJNNjQuMzEsNzEuMjh2MS44OWg4LjI5di00LjcxYzAtNy4xNy01LjgxLTEyLjk5LTEyLjk5LTEyLjk5aC0zLjkxdjguMjloMS4xYzQuMTUsMCw3LjUxLDMuMzYsNy41MSw3LjUxWiIvPgogICAgICA8cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik04NC45MSwyNy40NmgtMjQuNjZjLTkuMTIsMC0xNi41LDcuMzktMTYuNSwxNi41djI0LjY2YzAsOS4xMiw3LjM5LDE2LjUsMTYuNSwxNi41aDI0LjY2YzkuMTIsMCwxNi41LTcuMzksMTYuNS0xNi41di0yNC42NmMwLTkuMTItNy4zOS0xNi41LTE2LjUtMTYuNVpNOTAuODgsNjUuMDVjMCw1LjI3LTQuMjcsOS41NC05LjU0LDkuNTRoLTE3LjVjLTUuMjcsMC05LjU0LTQuMjctOS41NC05LjU0di0xNy41YzAtNS4yNyw0LjI3LTkuNTQsOS41NC05LjU0aDE3LjVjNS4yNywwLDkuNTQsNC4yNyw5LjU0LDkuNTR2MTcuNVoiLz4KICAgICAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJNNjQuMTYsODYuNTVjLS42OSwzLjQzLTMuNzIsNi4wMS03LjM2LDYuMDFoLTEzLjc3Yy00LjE1LDAtNy41MS0zLjM2LTcuNTEtNy41MXYtMTMuNzdjMC0zLjkxLDIuOTktNy4xMiw2LjgxLTcuNDd2LTguMzNoLTIuMTJjLTcuMTcsMC0xMi45OSw1LjgxLTEyLjk5LDEyLjk5djE5LjRjMCw3LjE3LDUuODEsMTIuOTksMTIuOTksMTIuOTloMTkuNGM3LjE3LDAsMTIuOTktNS44MSwxMi45OS0xMi45OXYtMS4zMmgtOC40NFoiLz4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPg=='
     const CX_PROVIDERS = JSON.parse(
         escapeNames(
             [...document.getElementById('providers').childNodes].map(n => n.data).join('')

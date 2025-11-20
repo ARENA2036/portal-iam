@@ -36,10 +36,10 @@
 .message {
   text-align: center;
   font-weight: normal;
-  color: rgb(212, 117, 28);
+  color: rgb(0, 0, 0);
   margin: 0;
   padding: 1px;
-  background: #e1e8e9;
+  background: 'transparent';
   position: fixed;
   top: 0;
   left: 0;

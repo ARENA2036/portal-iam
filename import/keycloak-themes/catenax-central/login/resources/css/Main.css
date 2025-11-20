@@ -35,17 +35,17 @@
 
 .message {
   text-align: center;
-  font-weight: bold;
-  color: rgb(255, 166, 0);
+  font-weight: normal;
+  color: rgb(212, 117, 28);
   margin: 0;
-  padding: 10px;
-  background: #ffffff;
+  padding: 1px;
+  background: #e1e8e9;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  margin-bottom: 15px;
+  margin-bottom: 1px;
 }
 
 pre#providers {

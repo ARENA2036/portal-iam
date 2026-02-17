@@ -241,7 +241,7 @@ class Header extends Viewable {
         this.view = N(
             'header',
             [
-                N('div', `This is a complete Tractus-X implementation of Release 25-03, but bypassing SD Factory and Clearing House -
+                N('div', `This is a complete Tractus-X implementation of Release 25-09, but bypassing SD Factory and Clearing House -
   This is NOT a production environment - it is for Testing purposes only`, { class: 'message' }),
                 N('div', null, { class: 'logo' }),
                 N('div', 'Search and select', { class: 'title' }),
@@ -273,14 +273,16 @@ let Search
 let Selector
 
 window.onload = () => {
-    let icon = document.querySelectorAll('link[rel=icon]')[0]
-    if (!icon) {
-        icon = document.createElement('link')
-        icon.rel = 'icon'
-        document.head.appendChild(icon)
-    }
-    icon.href = 'data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWluWU1pbiBtZWV0IiB2aWV3Qm94PSIwIDAgMTQ1IDg4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KPGc+DQoJPHBvbHlnb24gZmlsbD0iI0U1M0QxNyIgcG9pbnRzPSI3Mi4yODUsNDMuOTM2IDM2Ljg1MiwxLjQxNSA3Mi4yODUsMS40MTUgODkuOTg1LDIyLjY1NiAJIi8+DQoJPGc+DQoJCTxwb2x5Z29uIGZpbGw9IiNGMDgxMDkiIHBvaW50cz0iNzIuMjg1LDQzLjkzNSA1NC41OTYsNjUuMTYyIDcyLjI4NCw4Ni40NTUgODkuOTg1LDY1LjIwMyAJCSIvPg0KCQk8cG9seWdvbiBmaWxsPSIjRjA4MTA5IiBwb2ludHM9IjEwNy43MTgsMS40MTUgNzIuMjg0LDQzLjkzNSAxMDcuNzE4LDQzLjkzNSAxNDMuMTUxLDEuNDE1IAkJIi8+DQoJPC9nPg0KCTxwb2x5Z29uIGZpbGw9IiNFNTNEMTciIHBvaW50cz0iMTA3LjcxOCw4Ni40NTUgNzIuMjg1LDQzLjkzNSAxMDcuNzE4LDQzLjkzNSAxNDMuMTUxLDg2LjQ1NSAJIi8+DQoJPHBvbHlnb24gZmlsbD0iIzBBM0I5MyIgcG9pbnRzPSIzNi44NTIsNDMuOTM1IDM2Ljg1MSw0My45MzUgNTQuNTU0LDIyLjY5MSAzNi44NTIsMS40MTUgMS40MTgsNDMuOTM1IDEuNDE4LDQzLjkzNSAzNi44NTIsODYuNDU1IA0KCQk3Mi4yODUsODYuNDU1IAkiLz4NCjwvZz4NCjwvc3ZnPg0K'
+    let icon = document.querySelector('link[rel="icon"]');
 
+    if (!icon) {
+        icon = document.createElement('link');
+        icon.rel = 'icon';
+        document.head.appendChild(icon);
+    }
+    icon.type = 'image/x-icon';
+    icon.href = '../login/resources/images/favicon.ico';
+    
     const CX_PROVIDERS = JSON.parse(
         escapeNames(
             [...document.getElementById('providers').childNodes].map(n => n.data).join('')

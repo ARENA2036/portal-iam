@@ -47,7 +47,7 @@ This project depends on the following Helm chart from Bitnami:
 
 This project uses the following image content:
 
-- Image: Catena-X Logo
+- Image: ReDrives Logo
 - Source URL: <https://catena-x.net>
 
 ## Test Environments

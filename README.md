@@ -2,7 +2,7 @@
 
 # IAM: Keycloak instances
 
-This repository contains the reference configuration to deploy the Catena-X (CX) specific Keycloak instances.
+This repository contains the reference configuration to deploy the ReDrives specific Keycloak instances.
 
 The instances depend on the [helm chart from Bitnami](https://artifacthub.io/packages/helm/bitnami/keycloak) (chart version 23.0.0, app version 25.0.6).
 

@@ -189,6 +189,7 @@ class Validator {
 
 }
 
+
 class Viewable {
 
     constructor(view) {
@@ -293,8 +294,8 @@ class FormLogin extends Form {
     constructor(form) {
         super(
             N('div', [
-                N('h3', 'Register to Catena-X'),
-                N('p', 'Finish the company registration form to join Catena-X automotive network. Please use your email address as username and enter your password.'),
+                N('h3', 'Register to ReDrives'),
+                N('p', 'Finish the company registration form to join ReDriveS.. Please use your email address as username and enter your password.'),
                 form
             ])
         )
@@ -429,16 +430,29 @@ class App extends Viewable {
     }
 
     setIcon() {
-        let icon = document.querySelectorAll('link[rel=icon]')[0]
-        if (!icon) {
-            icon = document.createElement('link')
-            icon.rel = 'icon'
-            document.head.appendChild(icon)
-        }
-        icon.href = 'data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAABT1JREFUaEPlWT1MY0cQ/ubZkEhJ4TRJS9oIg9FhpFSBpDgp8SNcF0xxRkkPaS8Fpri0QJ8I7iTs64AzKZNAFQkjYWyU9qBMmoCUSLnEZqJ9frbfz+6+fTa6QLKlPW9nvtnZ+WZmCQMu3kQKr2EFQAGECZrH+YBbxvqcYkkHhLmMaTA2AYw4fxFmaB4Hg+wZ99u+AXAJawCWfQrvAgA3ZH4EkAl5604AKGELwEPpUd8RAC+6MR9EcUcAsPKi/R8B7PyUGUkmmw+JaITZzWbAJZgOmi1r78H7NW1ajpWFeBsZEE5u4gSE4UNDrRVmFCJS567FrdVPpn6uyeSMAXAZK2AUtcoMQmjnJJNKNFsrFEzBUQTAtGxP1TfC1y7iQy5jxCWr6SgdILyrY+Lvjt7LsJXY8YRK5JZeASJs5SYbi77fdDvwNpZAjtdTBpquKK+Wq1RHVwDSn6CBEhBv2JNnXQKVhpBDVq9jDdHx2VPJWKQFhyN8S3j9mpKbAIeJz8RgqQzP2Nkzp2QJAdAyrVzhlSjkKI/d4N+Vo7ElEK/3baf6wwM725gJAejD+EMQCsG4b6fGlijyou9Nz8hDAjlOYPAcgA90wIeH6Z374/VffSfAJQhvLRl4THi9SHlH3rdcr5veGzBwRYSCPdnwnWDlKL0FUpQsQqNFs/a9eqULwC2NRZEWtU5BmAt5/SSTSjYdrwvvGS0C9v5OJgoPJmqXsg8qx+kaGOOy/wg0n8vWn3kB7ILxqVYzY5UWwlxQOU7PuanWJFs5XrdAxVy2rr0flePRdTDJI8LlBQcAP8UbSOL3CONDWUaQUlyvAzhsNhOFYIng8I3IKp6OrlIdKwIsur3QYvDXs9mzr9oASvgQwPcaABuU9zcvleroNBFtmpKSzutccsJOhF+K8r3MaA7gGT7DNcpKAC/xFi2iG6fPq+m1WKUA4dS6bhWC9Yyb9Xz3pj8AZXwOxjdSAIQ9mu9dzP3q2DKDRTtpuGjVztZDDOz1unej/gBs4zEIj6QWBS5upTp2YsSqeq+LuPb3067yVwAgrW5oOh4g3mgmksVgegxNMSQe+5cB0AVwXejUKV77pFOMWwWA8aQ5lFgOeb3dBImLalLMnVK+J2eehWLdAX8IqUoBJz2bNEG+Y/IT5X41vcuQkyuBvshl69+2eaBPAKpSwG2Cdgy93oHg4xqXJH9TpTpfKREXgPA6GMuzU41Q/R+zCRL2SctxbRkBIGHRRx/fq/8Q+wREg/JXa/hSWgq056TmJTRhD3+i4CVJgej5UbpA7XujXMPD9Ob98fofHQCPQHiskA6VEUE5FSlp9A/UBInQzWUbTtXbBqAvJWqUx4TMGFkpYEDPN9AEBVpKLsEWJ6dRvk55fBnI690CzMDoTqwP3gTJmnp+ireRxC8RhogmunNpxTDKPNaBG2qC6KKZtDJeruk1NCXnYULbhxp62i92Q00QCKfNRGI6SJReACIkRO6+qXUqxjK0gNBI0CTLeI3QtZ7Bpl49+48DS+H1zhb7x+kXJo2QSesZngsNFkoX7phF+U7mjlzEG4N+Kcrx4Efyydw2iiDn5THO2sBLFIOkFNxAtKIARUw/5E2QzBjldNoZpVsoRk4qAGleVyGPAmBxa0I1So8FoCPsFmZzIOdJVYxNUiCc4xo1WDiI+6waBcDONoxH/l0mjhMng8r+xwHQhZ2ttx/NDVes4zLcUyumPQHGE3uqEfXk5Nv/9gBQMG2U024HgECBFmV0gKXjiA8u6w8h9RTDVNMrPwH3lfKciLdksyNTwzty/wATsrFPLbsvywAAAABJRU5ErkJggg=='
+        let icon = document.querySelector('link[rel="icon"]');
+
+    if (!icon) {
+        icon = document.createElement('link');
+        icon.rel = 'icon';
+        document.head.appendChild(icon);
+    }
+
+    icon.type = 'image/x-icon';
+    icon.href = '../login/resources/images/favicon.ico';
         return this
     }
 
+}
+class TopBanner extends Viewable {
+    constructor() {
+        super(
+            N('div',
+                'This is a complete Tractus-X implementation of Release 25-09, but bypassing SD Factory and Clearing House - This is NOT a production environment - it is for Testing purposes only',
+                { class: 'top-warning' }
+            )
+        )
+    }
 }
 
 class Header extends Viewable {
@@ -465,7 +479,7 @@ class Footer extends Viewable {
         super(
             N('footer', [
                 N('div', '', { class: 'links' }),
-                N('div', 'Copyright © Catena-X Automotive Network.', { class: 'copy' })
+                N('div', 'Copyright © ReDriveS.', { class: 'copy' })
             ])
         )
     }
@@ -480,6 +494,7 @@ addEvents(
             const content = document.getElementById('kc-content')
             const form = Form.fromPage()
             new App(true)
+                .append(new TopBanner())
                 .append(new Header(title))
                 .append(
                     new Main().append(

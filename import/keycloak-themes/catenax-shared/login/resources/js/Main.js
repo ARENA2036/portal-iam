@@ -441,17 +441,27 @@ class App extends Viewable {
 
 }
 
+class TopBanner extends Viewable {
+    constructor() {
+        super(
+            N('div',
+                'This is a complete Tractus-X implementation of Release 25-09, but bypassing SD Factory and Clearing House - This is NOT a production environment - it is for Testing purposes only',
+                { class: 'top-warning' }
+            )
+        )
+    }
+}
+
 class Header extends Viewable {
 
     constructor(title) {
         super(
             N('header', [
-                N('div', `This is a complete Tractus-X implementation of Release 25-06, but bypassing SD Factory and Clearing House -
-  This is NOT a production environment - it is for Testing purposes only`, { class: 'message' }),
-        
+                N('h3', title)
             ])
         )
     }
+
 }
 
 class Main extends Viewable {
@@ -483,6 +493,7 @@ addEvents(
             const content = document.getElementById('kc-content')
             const form = Form.fromPage()
             new App(true)
+                .append(new TopBanner())
                 .append(new Header(title))
                 .append(
                     new Main().append(

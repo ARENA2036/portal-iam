@@ -229,10 +229,21 @@ class SelectProvider extends Viewable {
 }
 
 class Page extends Viewable {
-  constructor() {
-      super()
-      this.view = document.body
-  }
+    constructor() {
+        super()
+        this.view = document.body
+    }
+}
+
+class TopBanner extends Viewable {
+    constructor() {
+        super()
+        this.view = N(
+            'div',
+            'This is a complete Tractus-X implementation of Release 25-09, but bypassing SD Factory and Clearing House - This is NOT a production environment - it is for Testing purposes only',
+            { class: 'top-warning' }
+        )
+    }
 }
 
 class Header extends Viewable {
@@ -241,8 +252,6 @@ class Header extends Viewable {
         this.view = N(
             'header',
             [
-                N('div', `This is a complete Tractus-X implementation of Release 25-06, but bypassing SD Factory and Clearing House -
-  This is NOT a production environment - it is for Testing purposes only`, { class: 'message' }),
                 N('div', null, { class: 'logo' }),
                 N('div', 'Search and select', { class: 'title' }),
                 N('div', 'your company name to login', { class: 'subtitle' }),
@@ -253,20 +262,20 @@ class Header extends Viewable {
 }
 
 class Footer extends Viewable {
-  constructor() {
-      super()
-      this.view = N('footer', [
-          N('div', '', { class: 'links' }),
-          N('div', 'Copyright © ARENA2036-X', { class: 'copy' })
-      ])
-  }
+    constructor() {
+        super()
+        this.view = N('footer', [
+            N('div', '', { class: 'links' }),
+            N('div', 'Copyright © ReDriveS.', { class: 'copy' })
+        ])
+    }
 }
 
 class Main extends Viewable {
-  constructor() {
-      super()
-      this.view = N('main', Selector.getView())
-  }
+    constructor() {
+        super()
+        this.view = N('main', Selector.getView())
+    }
 }
 
 let Search
@@ -291,6 +300,7 @@ window.onload = () => {
     Search = new SearchInput(CX_PROVIDERS)
     Selector = new SelectProvider(CX_PROVIDERS)
     new Page()
+      .append(new TopBanner())
       .append(new Header())
       .append(new Main())
       .append(new Footer())

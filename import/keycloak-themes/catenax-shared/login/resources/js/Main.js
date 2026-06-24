@@ -448,7 +448,7 @@ class TopBanner extends Viewable {
     constructor() {
         super(
             N('div',
-                'This is a complete Tractus-X implementation of Release 25-09, but bypassing SD Factory and Clearing House - This is NOT a production environment - it is for Testing purposes only',
+                'This is a complete Tractus-X implementation of Release 26-03, but bypassing SD Factory and Clearing House - This is NOT a production environment - it is for Testing purposes only',
                 { class: 'top-warning' }
             )
         )

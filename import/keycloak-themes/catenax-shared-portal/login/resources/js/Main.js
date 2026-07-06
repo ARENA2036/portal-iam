@@ -437,8 +437,13 @@ class App extends Viewable {
             document.head.appendChild(icon);
         }
 
+        const mainScript = Array.from(document.scripts).find((script) => /\/js\/Main\.js(?:\?|$)/.test(script.src));
+        const resourceBasePath = mainScript && mainScript.src
+            ? mainScript.src.replace(/\/js\/Main\.js(?:\?.*)?$/, '')
+            : null;
+
         icon.type = 'image/x-icon';
-        icon.href = '../login/resources/images/favicon.ico';
+        icon.href = resourceBasePath ? `${resourceBasePath}/images/favicon.ico` : 'resources/images/favicon.ico';
         return this
     }
 
